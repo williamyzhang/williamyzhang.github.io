@@ -1,0 +1,17 @@
+body {
+    /* background-color: black; */
+    font-family: 'Monaco', monospace;
+    /* color: white; */
+  }
+
+.octave {
+    display: inline-block;
+  }
+/* 
+output {
+    display: inline-block;
+} */
+
+  /* p {
+    display: inline-block;
+  } */

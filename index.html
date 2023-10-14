@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf‐8">
+    <title> William's Lab 2 </title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+  
+<body>
+    <!-- <h4> Toggle Waveform </h4> -->
+    <form id="Waveform">
+        <input type="radio" id="sine" name="waveforms" value="sine" checked>
+        <label for="sine">Sine</label>
+        <input type="radio" id="sawtooth" name="waveforms" value="sawtooth">
+        <label for="sawtooth">Sawtooth</label>
+        <input type="radio" id="square" name="waveforms" value="square">
+        <label for="square">Square</label>
+        <input type="radio" id="triangle" name="waveforms" value="triangle">
+        <label for="triangle">Triangle</label>
+
+    </form>
+    <!-- <input  class="button black" id="Waveform" type="button" value="Sine"/> -->
+    <br>
+    <!-- <h4> Toggle Tuning </h4> -->
+    <form id="Tuning">
+        <input type="radio" id="12-EDO" name="tunings" value="12-EDO">
+        <label for="12-EDO">12-EDO</label>
+        <input type="radio" id="31-EDO" name="tunings" value="31-EDO" checked>
+        <label for="31-EDO">31-EDO</label>
+
+    </form>
+
+    <!-- <br> -->
+    <p>Number of Partials</p>
+    <input type="range" name="npartials" min="1" max="12" step="1" value="3" oninput="nPartialText.value = this.value">
+    <output id="nPartialText">3</output>
+
+    <p>Press left and right arrow keys to change octave</p>
+    <div> <p class="octave">Octave:&nbsp;</p><output id="octave" class="octave">4</output></div>
+
+    <h4> AM </h4>
+    <form id="AM">
+        <input type="radio" id="AMon" name="amtoggle" value="true">
+        <label for="AMon">On</label>
+        <input type="radio" id="AMoff" name="amtoggle" value="false" checked>
+        <label for="AMoff">Off</label>
+
+        <p>Modulator Frequency</p>
+        <input type="range" name="AMfreq" min="20" max="400" value="90" oninput="AMfreqtext.value = this.value">
+        <output id="AMfreqtext">90</output>
+
+    </form>
+
+    <h4> FM </h4>
+    <form id="FM">
+        <input type="radio" id="FMon" name="fmtoggle" value="true">
+        <label for="FMon">On</label>
+        <input type="radio" id="FMoff" name="fmtoggle" value="false" checked>
+        <label for="FMoff">Off</label>
+
+        <p>Modulator Frequency</p>
+        <input type="range" name="FMfreq" min="20" max="400" value="100" oninput="FMfreqtext.value = this.value">
+        <output id="FMfreqtext">100</output>
+        <p>Modulation Index</p>
+        <input type="range" name="FMindex" min="0" max="400" value="100" oninput="FMindextext.value = this.value">
+        <output id="FMindextext">100</output>
+
+    </form>
+
+    <h4> LFO </h4>
+    <p>LFO Frequency</p>
+    <input type="range" name="LFOfreq" min="0" max="20" step="0.5" value="0" oninput="LFOfreqtext.value = this.value">
+    <!-- <input type="text" id="LFOfreqtext" value=""> -->
+    <output id="LFOfreqtext">0</output>
+    <p>LFO Gain</p><input type="range" name="LFOgain" min="0" max="100" value="8" onchange="LFOgaintext.value = this.value;">
+    <output id="LFOgaintext">8</output>
+    <!-- <input type="text" id="LFOgaintext" value=""> -->
+    <!-- <input  class="button black" id="Tuning" type="button" value="31-EDO"/> -->
+    
+    <h4> ADSR Envelope </h4>
+    <p>Attack</p>
+    <input type="range" name="attack" min="0" max="0.5" step="0.01" value="0.05" oninput="attacktext.value = this.value">
+    <output id="attacktext">0.05</output>
+    <p>Delay</p><input type="range" name="delay" min="0" max="0.5" step="0.01" value="0.2" onchange="delaytext.value = this.value;">
+    <output id="delaytext">0.2</output>
+    <p>Sustain</p>
+    <input type="range" name="sustain" min="0" max="100" step="1" value="80" oninput="sustaintext.value = this.value">
+    <output id="sustaintext">80</output><p class="octave">%</p>
+    <p>Release</p><input type="range" name="release" min="0" max="2" step="0.05" value="0.05" onchange="releasetext.value = this.value;">
+    <output id="releasetext">0.05</output>
+
+    <hr class="dashed">
+    <h4>(31-EDO only)</h4>
+    <img src="https://cdn.glitch.global/56aab812-9bcb-42bd-a445-04e6e65d7663/31edo-keyboard.jpg?v=1695173144205" alt="Keybinding">
+    <p>This is the QWERTY keybinding for 31-edo. The philosophy behind this is that 
+        I wanted to keep the major scale on the bottom row while adding microtones
+        atop, with a general rule of getting higher as you go up and right.
+        <br> It's a bit unintuitive and I'm open to any suggestions for improvement.
+        Right now the graphic (just a jpg, not interactive, sorry) is color-coded
+        to show each note in the major scale and the microtones above it as one color.
+    </p>
+</body>
+<script src="main.js"> </script>
+
+</html>
