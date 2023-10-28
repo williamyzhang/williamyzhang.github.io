@@ -1,0 +1,10 @@
+1. My solution represents the x-axis and y-axis labels as their own variables,
+which are modified each time the user makes a selection. The visualisation updates
+as well once one variable changes, thus being consistent with the unidirectional
+flow pattern. The options of labels to select from are simply a hardcoded
+constant array of the numerical data columns, since the data being loaded in
+also hardcodes the columns.
+2. To highlight circles on cursor hovering, I simply used CSS interactivity with
+circles:hover for simplicity. For the labels, I used the other CSS trick of having
+a title that appears with the necessary information when the cursor hovers over
+the circles. These are simple and maintain the unidirectional flow pattern.

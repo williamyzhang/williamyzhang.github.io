@@ -1,0 +1,15 @@
+1. For the map, I simply combined the sphere from 4.2 with the colourScale handling
+from 4.1 to get a world map colored according to economy.
+2. Since the legend interacts with the world map, I added it as part of 
+choroplethMap.js, so that the interactivity code could incorporate both the country
+paths and the legend elements. For the bounding box, I added a rectangle
+before the legend elements whose height depends on the size of the scale domain.
+3. The legend clicking interactivity is implemented with an on "click" function,
+that selects all the countries whose fill color does not correspond to the clicked
+legend item's color, and then checks whether those countries are attenuated or
+fully visible and changes their color and the color of the other legend items
+accordingly. Furthermore, a lastSelectedRegion variable is stored to ensure that
+once the user clicks to highlight a region, they must click off of that region
+before select to highlight another.
+4. The tooltip is implemented similarly to 4.1, with an added if statement to
+make sure the country is fully visible before displaying the tooltip.

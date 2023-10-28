@@ -1,0 +1,10 @@
+1. To draw the world map, we simply create an EqualEarth projection and add a sphere
+and graticule first before plotting the countries as paths. I chose 15 degrees
+as the interval for my graticules so that it would not be too crowded when displaying
+the entire earth. 
+2. The wonders are plotted as circles with their centers at the coordinate projection
+of their lat/lon, and their radius a multiple of the number of visitors. A delay
+transition is used to make sure the circles and the text appear in sequential order.
+3. The opacity change is done via CSS interactivity, while the tooltip appears on
+mouseover. Much of the appearance of the tooltip is done in CSS, while the content
+is simply taken from symbolsData.

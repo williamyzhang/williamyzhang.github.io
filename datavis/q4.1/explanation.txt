@@ -1,0 +1,9 @@
+1. The map is rendered by choroplethMap by defining the projection and pathGenerator
+used, then calling d3-zoom to allow zoom interactivity, calling projection.fitSize()
+to fit the map to our screen size, and finally appending paths for each country,
+to which we add a colour fill based on population density by passing it to 
+colourScale.
+2. The hovering requirements are implemented partially by CSS, which thickens the
+outline around countries you hover over. The tooltip is implemented by event listeners
+in choroplethMap, which retrieve data from the path element to display in a formatted
+HTML tooltip.
