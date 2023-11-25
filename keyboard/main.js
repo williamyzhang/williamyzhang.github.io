@@ -1,8 +1,5 @@
 var audioCtx;
 
-
-
-
 document.addEventListener("DOMContentLoaded", function(event) {
     
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -10,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const globalGain = audioCtx.createGain();
     globalGain.gain.setValueAtTime(0.8, audioCtx.currentTime);
     globalGain.connect(audioCtx.destination);
+
+    document.getElementById("defaultOpen").click();
 
     // Define ADSR values
     var attack = 0.05;  // in seconds
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     // user settings
     var waveform = "sine";
-    var tuning = "12-EDO";
+    var tuning = "31-EDO";
     var synthType = "additive";
     var npartials = 3;
         // new plan: 3 oscs - can choose waveform type, then can add am/fm mods
@@ -415,6 +414,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
   },
   false
 );
+
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+document.getElementById("Tuning").addEventListener("change", 
+    function(event) {
+        var tuning = document.querySelector("input[name=tunings]:checked").value;
+        var img = document.getElementById("keymap");
+        // console.log(tuning);
+        if (tuning === '12-EDO') {
+            img.src = "12edo-keyboard.jpg"
+        } else {
+            img.src = "31edo-keyboard.jpg"
+        }
+});
 
 // function updateLFOFreqInput(val) {
 //     // document.getElementById('LFOfreqtext').value=val; 
