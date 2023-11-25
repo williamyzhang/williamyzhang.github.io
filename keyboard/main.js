@@ -1,5 +1,7 @@
 var audioCtx;
 
+var referenceNoteFrequency = 440; // A4
+
 document.addEventListener("DOMContentLoaded", function(event) {
     
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -19,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     const depthGain = 0.2;
     const modulatedGain = 0.2;
-
-    const referenceNoteFrequency = 466; // A4
     
     // maps to remember notes
     var activeOscillators = {};
@@ -210,7 +210,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         decay = document.querySelector("input[name=delay]").value;
         sustain = document.querySelector("input[name=sustain]").value * 0.01 * peak;
         release = parseFloat(document.querySelector("input[name=release]").value);
-        console.log(attack, decay, sustain, release)
+        // console.log(attack, decay, sustain, release)
+        referenceNoteFrequency = document.querySelector("input[name=A4freq]").value;
 
     //   console.log (oscs)
       if (synthType === "additive") {
@@ -447,6 +448,12 @@ document.getElementById("Tuning").addEventListener("change",
             img.src = "31edo-keyboard.jpg"
         }
 });
+
+// document.getElementById("a4freq").addEventListener("change", 
+//     function(event) {
+//         referenceNoteFrequency = document.querySelector("input[id=a4freq]")
+//         console.log(referenceNoteFrequency)
+// });
 
 // function updateLFOFreqInput(val) {
 //     // document.getElementById('LFOfreqtext').value=val; 

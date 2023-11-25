@@ -77,6 +77,11 @@ form {
   display: inline-block;
 }
 
+.optionbarlong {
+  width: 400px;
+  display: inline-block;
+}
+
 .octave {
   display: inline;
   /* font-size: medium; */
@@ -106,6 +111,11 @@ form {
 .explainerinline {
   font-size: small;
   margin: 0px;
+  display: inline;
+}
+
+.A4bar {
+  width: 200px;
   display: inline;
 }
 /* 

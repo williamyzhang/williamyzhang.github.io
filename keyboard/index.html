@@ -3,7 +3,7 @@
     
 <head>
     <meta charset="utf‐8">
-    <title> 31-EDO Keyboard </title>
+    <title> 31-EDO Synth </title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
   
@@ -27,6 +27,15 @@
         <div class="octaveblock"> 
             <p class="octave">Octave:&nbsp;</p><output id="octave" class="octave">4</output>
             <p class="explainer">(Press left and right arrow keys to change octave)</p>
+        </div>
+
+        <br>
+        <div class="optionbarlong"> 
+            <p class="sectionlabel" style="display: inline">A4 = </p>
+            <input name="A4freq" type="range" class="A4bar" style="display: inline"
+                min="400" max="470" step="0.5" value="440" oninput="A4freq.value = this.value">
+            <output id="A4freq" style="display: inline;">440</output>
+            <p class="miniinput">Hz</p>
         </div>
 
         <br>
