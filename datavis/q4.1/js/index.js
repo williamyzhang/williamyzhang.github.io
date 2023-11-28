@@ -15,7 +15,7 @@ const updateVis = () => {
 
   // colour scale (from d3-scale-chromatic -- standard D3 bundle)
   const popDensityExtent = d3.extent(countries.features, colourValue);
-  const colourScale = d3.scaleSequential()
+  const colourScale = d3.scaleSequentialLog()
     .domain(popDensityExtent)
     .interpolator(d3.interpolateBlues);
 

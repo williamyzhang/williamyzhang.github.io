@@ -88,7 +88,7 @@ export const scatterPlot = (parent, props) => {
       .attr('x', -innerHeight/2)
       .text(yAxisLabel);
 
-  /*
+
   // title
   let title = 'Cars: ' + yAxisLabel + ' vs ' + xAxisLabel;
   const titleText = gEnter.merge(g)
@@ -101,7 +101,7 @@ export const scatterPlot = (parent, props) => {
   titleTextEnter
     .merge(titleText)
       .text(title);
-  */
+
   var div = d3.select("body").append("div")
   .attr("class", "tooltip")
   .style("opacity", 0);

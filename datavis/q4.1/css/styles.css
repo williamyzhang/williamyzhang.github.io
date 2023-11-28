@@ -1,6 +1,20 @@
 body {
   font-family: Helvetica, sans-serif;
   overflow: hidden;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 200;
+  color: #333;
+  /* margin-bottom: 0px; */
+}
+
+p {
+  margin-top: 0px;
+  font-size: 14px;
+  color: #747474;
 }
 
 .country {
@@ -19,7 +33,7 @@ body {
   box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
   border: 1px solid #ddd;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 300;
   padding: 8px;
   min-width: 160px;
   color: #333;
@@ -27,7 +41,7 @@ body {
 .tooltip-title {
   color: #000;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
 }
 #tooltip ul {
   margin: 5px 0 0 0;
@@ -38,4 +52,5 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 1000;
+  /* text-align: right; */
 }

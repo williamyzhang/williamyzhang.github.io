@@ -1,7 +1,24 @@
 body {
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: Helvetica, sans-serif;
   background: #fafcff;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 200;
+  color: #333;
+  margin-left: 330px;
+  /* text-align: ; */
+  /* margin-bottom: 0px; */
+}
+
+p {
+  margin-top: 0px;
+  font-size: 14px;
+  color: #747474;
+  margin-left: 300px;
+  /* text-align: center; */
 }
 
 .sphere {

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Scatter plot with menus</title>
+    <title>Interactive Scatterplot of Cars</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- <h4>Cars: </h4> -->
     <div id="menus">
       <span id="y-menu"></span>
       vs.
       <span id="x-menu"></span>
     </div>
+    <p>Use the dropdown menus to compare two characteristics of various cars.
+      Hover your mouse over a point on the scatterplot to see the car it represents.
+    </p>
     <svg width="960" height="500"></svg>
     <div id="tooltip"></div>
     <script src="index.js" type="module"></script>
