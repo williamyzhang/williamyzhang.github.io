@@ -2,3 +2,4 @@ _site/
 .leftover
 .gitignore*
 ..gitignore*
+/datavis/.vscode

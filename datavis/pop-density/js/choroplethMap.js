@@ -28,6 +28,9 @@ export const choroplethMap = (parent, props) => {
     .attr("d", pathGenerator)
     .attr("fill", (d) => {
       // Set fill color based on population density
+      if (d.properties.pop_density === undefined) {
+        return "#BFBFBF";
+      }
       return colourScale(d.properties.pop_density);
     })
     .attr("stroke", "white")
